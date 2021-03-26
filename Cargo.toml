@@ -1,0 +1,22 @@
+[package]
+name = "feelui"
+description = "An Event-driven GUI Toolkit."
+version = "0.1.0"
+authors = ["Ben Wong(AnErW)"]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+keywords = ["gui","ui"]
+edition = "2018"
+
+[workspace]
+members = [
+"feelui-core",
+"feelui-baseview"
+]
+
+[features]
+baseview = ["feelui-baseview"]
+
+[dependencies]
+feelui-core = {version = "0.1.0", path = "./feelui-core"}
+feelui-baseview = {version = "0.1.0", path = "./feelui-baseview",optional=true}
